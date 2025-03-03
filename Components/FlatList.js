@@ -31,7 +31,7 @@ function App() {
           data={data}
           renderItem={({item}) => (
             <View
-              key={item?.id}
+              key={index}
               style={{
                 padding: 10,
                 borderColor: 'black',
@@ -40,23 +40,23 @@ function App() {
               }}>
               <Text
                 style={{
-                  fontSize: 20,
+                  fontSize: 50,
                 }}>
-                Id : {item?.id}
+                Id : {dt?.id}
               </Text>
               <Text
                 style={{
                   fontSize: 14,
                   paddingTop: 5,
                 }}>
-                Title : {item?.title}
+                Title : {dt?.title}
               </Text>
               <Text
                 style={{
                   fontSize: 14,
                   paddingTop: 5,
                 }}>
-                Body : {item?.body}
+                Body : {dt?.body}
               </Text>
             </View>
           )}
