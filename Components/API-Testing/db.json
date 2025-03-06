@@ -11,6 +11,36 @@
       "name": 2,
       "age": "20",
       "email": "2e@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Abdullah",
+      "age": 22,
+      "email": "abdullah@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Shazim",
+      "age": 5,
+      "email": "shaz@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Naz",
+      "age": 50,
+      "email": "naz@gmail.com"
+    },
+    {
+      "id": "6004",
+      "name": "nazia",
+      "age": "nazia@gmail.com",
+      "email": "60"
+    },
+    {
+      "id": "1e65",
+      "name": "azmat",
+      "age": "azmat@gmail.com",
+      "email": "55"
     }
   ]
 }
