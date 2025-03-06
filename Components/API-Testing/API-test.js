@@ -9,12 +9,33 @@ import {
   FlatList,
 } from 'react-native';
 
-function App() {
+function APITest() {
   const [name, setName] = useState('');
   const [age, setAge] = useState(0);
   const [email, setEmail] = useState('');
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (error) {
+      const timer = setTimeout(() => setError(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [error]);
+
+  useEffect(() => {
+    if (success) {
+      const timer = setTimeout(() => setSuccess(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [success]);
 
   const saveAPIData = async () => {
+    if (!name || !age || !email) {
+      setError('All fields are required');
+      return false;
+    }
+
     const url = 'http://10.0.2.2:3000/users';
     const formdata = {
       name,
@@ -29,7 +50,10 @@ function App() {
       body: JSON.stringify(formdata),
     });
     result = await result.json();
-    console.log(result);
+    if (result) {
+      setSuccess(true);
+      console.log(result);
+    }
     console.warn('Data Added');
     setName('');
     setEmail('');
@@ -56,6 +80,10 @@ function App() {
         placeholder="Enter your age"
         onChangeText={text => setAge(text)}
       />
+      {error ? <Text style={styles.textError}>{error} </Text> : null}
+      {success ? (
+        <Text style={styles.textSuccess}>Data Successfully Added </Text>
+      ) : null}
 
       <Button title="SAVE DATA" onPress={saveAPIData} />
     </View>
@@ -74,6 +102,17 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     margin: 20,
   },
+
+  textError: {
+    color: 'red',
+    margin: 10,
+    marginLeft: 20,
+  },
+  textSuccess: {
+    color: 'green',
+    margin: 10,
+    marginLeft: 20,
+  },
 });
 
-export default App;
+export default APITest;

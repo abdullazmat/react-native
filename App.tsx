@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import APITest from './Components/API-Testing/API-test';
 import {
   View,
   Text,
@@ -10,7 +11,11 @@ import {
 } from 'react-native';
 
 function App() {
-  return <View></View>;
+  return (
+    <View>
+      <APITest />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({});
