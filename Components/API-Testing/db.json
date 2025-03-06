@@ -3,12 +3,12 @@
     {
       "id": "1",
       "name": 1,
-      "age": "Testing2",
+      "age": "54",
       "email": "abcd@gmail.com"
     },
     {
       "id": "2",
-      "name": 2,
+      "name": "Saad",
       "age": "20",
       "email": "2e@gmail.com"
     },
@@ -33,14 +33,14 @@
     {
       "id": "6004",
       "name": "nazia",
-      "age": "nazia@gmail.com",
-      "email": "60"
+      "age": "60",
+      "email": "nazia@gmail.com"
     },
     {
       "id": "1e65",
       "name": "azmat",
-      "age": "azmat@gmail.com",
-      "email": "55"
+      "age": "55",
+      "email": "azmat@gmail.com"
     },
     {
       "id": "ef9f",
@@ -51,8 +51,8 @@
     {
       "id": "aa34",
       "name": "arif",
-      "age": "arif@gmail.com",
-      "email": "54"
+      "age": "54",
+      "email": "arif@gmail.com"
     }
   ]
 }

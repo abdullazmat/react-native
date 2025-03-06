@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import APITest from './Components/API-Testing/API-test';
+import ApiDataList from './Components/API-Testing/ApiDataList';
 import {
   View,
   Text,
@@ -13,7 +13,7 @@ import {
 function App() {
   return (
     <View>
-      <APITest />
+      <ApiDataList />
     </View>
   );
 }
